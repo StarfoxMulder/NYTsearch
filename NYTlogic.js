@@ -21,11 +21,12 @@ $('form').submit( function() {
         .done(function(response) {
         	resultsArray = [];
 
-        	//for(var j = 0; )
 
-        	var responseDate = response.response.pub_date.substring(0,3);
 
         	if(response.response.pub_date < endYear && response.response.pub_date > startYear) {
+
+	        	var responseDate = response.response.pub_date.substring(0,3);
+	        	
 	        	for(var i = 0; i < numRecords; i++) {
 
 	            // populating each response
@@ -36,8 +37,9 @@ $('form').submit( function() {
 	            firstRowTds.eq(1).text(response.Author);
 
 	            firstRowTds.eq(2).text(response.Date);
-	        };
-        };
+        		};
+    		};
+    	};
     };
 })
 
