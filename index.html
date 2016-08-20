@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>New York Times Search</title>
+	
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+	<!-- header -->
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header text-center">
+				<img src="https://a1.nyt.com/assets/homepage/20160816-145736/images/foundation/logos/nyt-logo-379x64.svg" height="80px">
+<!-- 				<h2>Search</h2>
+ -->			</div>
+			
+		</div>
+	</div>
+	<div class="row">
+		<!-- search -->
+		<div class="col-md-4">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Search</h3>
+				</div>
+				<div class="panel-body">
+					<form>
+						<div class="form-group">
+							<label for="searchTerm">Search Term</label>
+							<input type="text" class="form-control" id="searchTerm" placeholder="Search">
+						</div>
+						<div class="form-group">
+								<label for="exampleSelect1">Number of records to display</label>
+								<select class="form-control" id="numRecords">
+									<option value="1">1</option>
+									<option value="5">5</option>
+									<option value="10">10</option>
+								</select>
+						</div>
+						<div class="form-group">
+							<label for="startYear">Start Year</label>
+							<input type="text" class="form-control" id="startYear" placeholder="1990">
+						</div>
+						<div class="form-group">
+							<label for="endYear">End Year</label>
+							<input type="text" class="form-control" id="endYear" placeholder="2000">
+						</div>
+						
+					<button type="submit" class="btn btn-default" id="search">Search</button>
+					<button type="submit" class="btn btn-danger" id="clear">Clear</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- results -->
+		<div class="col-md-8">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Results</h3>
+				</div>
+				<div class="panel-body" id="results">
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+
+<script src="NYTlogic.js"></script>
+
+</body>
+</html>
