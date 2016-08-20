@@ -21,7 +21,7 @@ $('form').submit( function() {
         .done(function(response) {
         	resultsArray = [];
 
-        	for(var j =0; )
+        	//for(var j = 0; )
 
         	var responseDate = response.response.pub_date.substring(0,3);
 
