@@ -19,16 +19,24 @@ $('form').submit( function() {
             method: 'GET'
         })
         .done(function(response) {
-        	for(var i = 0; i < numRecords; i++) {
+        	resultsArray = [];
 
-            // populating each response
-            var  = $('table').children().eq(1).children('tr').eq(0).children('td');
+        	for(var j =0; )
 
-            firstRowTds.eq(0).text(response.Title);
+        	var responseDate = response.response.pub_date.substring(0,3);
 
-            firstRowTds.eq(1).text(response.Author);
+        	if(response.response.pub_date < endYear && response.response.pub_date > startYear) {
+	        	for(var i = 0; i < numRecords; i++) {
 
-            firstRowTds.eq(2).text(response.Date);
+	            // populating each response
+	            var  = $('table').children().eq(1).children('tr').eq(0).children('td');
+
+	            firstRowTds.eq(0).text(response.Title);
+
+	            firstRowTds.eq(1).text(response.Author);
+
+	            firstRowTds.eq(2).text(response.Date);
+	        };
         };
     };
 })
